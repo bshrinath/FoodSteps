@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+@import FirebaseAuth;
 
-@interface FirstViewController : UIViewController
+@interface FirstViewController : UIViewController <FBSDKLoginButtonDelegate>
 
+@property (strong, nonatomic) IBOutlet FBSDKLoginButton *loginButton;
+
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *avSpinner;
 
 @end
 
